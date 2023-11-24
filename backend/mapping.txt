@@ -1,0 +1,579 @@
+PUT recipedb2_ingredient_phrase
+{
+  "settings": {
+    "analysis": {
+        "analyzer": {
+          "autocomplete": {
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "autocomplete"
+          },
+          "autocomplete_search": {
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "standard"
+          }
+        },
+        "tokenizer": {
+          "autocomplete": {
+            "token_chars": [
+              "letter",
+              "digit"
+            ],
+            "min_gram": "1",
+            "type": "edge_ngram",
+            "max_gram": "40"
+          }
+        }
+      },
+  },
+  "mappings": {
+    "properties": {
+      "M_or_A": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "df": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ing_id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ingredient": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "ingredient_Phrase": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ndb_id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "quantity": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "recipe_no": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "size": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "state": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "temp": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "unit": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  }
+}
+
+
+PUT recipedb2_ingredient_flavor
+{
+  "settings": {
+    "analysis": {
+        "analyzer": {
+          "autocomplete": {
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "autocomplete"
+          },
+          "autocomplete_search": {
+            "filter": [
+              "lowercase"
+            ],
+            "tokenizer": "standard"
+          }
+        },
+        "tokenizer": {
+          "autocomplete": {
+            "token_chars": [
+              "letter",
+              "digit"
+            ],
+            "min_gram": "1",
+            "type": "edge_ngram",
+            "max_gram": "40"
+          }
+        }
+      },
+  },
+  "mappings": {
+    "properties": {
+      "Diet_rx_link": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Dietrx_Category": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "FlavorDB_Category": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Flavor_DB_Link": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "IngID": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "flavordb_id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "frequency": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "generic_name": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ingredient": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "wikiimage": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "wikilink": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+PUT recipedb2_general
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "autocomplete": {
+          "filter": [
+            "lowercase"
+          ],
+          "tokenizer": "autocomplete"
+        },
+        "autocomplete_search": {
+          "filter": [
+            "lowercase"
+          ],
+          "tokenizer": "standard"
+        }
+      },
+      "tokenizer": {
+        "autocomplete": {
+          "token_chars": [
+            "letter",
+            "digit"
+          ],
+          "min_gram": "1",
+          "type": "edge_ngram",
+          "max_gram": "40"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "Calories": {
+        "type": "float",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Carbohydrate, by difference (g)": {
+        "type": "float",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Continent": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "Energy (kcal)": {
+        "type": "float",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Processes": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "text",
+            "analyzer": "standard",
+            "fielddata": true
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "Protein (g)": {
+        "type": "float",
+        "fields": {
+          "keyword": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "autocomplete_search"
+          }
+        }
+      },
+      "Recipe_id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Recipe_title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "Region": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "Source": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "Sub_region": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "Total lipid (fat) (g)": {
+        "type": "float",
+        "fields": {
+          "keyword": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "autocomplete_search"
+          }
+        }
+      },
+      "Utensils": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "text",
+            "analyzer": "standard",
+            "fielddata": true
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "cook_time": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "img_url": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "lacto_vegetarian": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ovo_lacto_vegetarian": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "ovo_vegetarian": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "pescetarian": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "prep_time": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "servings": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        },
+        "analyzer": "autocomplete",
+        "search_analyzer": "autocomplete_search"
+      },
+      "total_time": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "url": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "vegan": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+PUT /recipedb2_general/_settings
+{
+  "index" : {
+    "max_result_window" : 2000000,
+    "max_inner_result_window": 2000000
+  }
+}
+
+PUT /recipedb2_ingredient_flavor/_settings
+{
+  "index" : {
+    "max_result_window" : 2000000,
+    "max_inner_result_window": 2000000
+  }
+}
+
+PUT /recipedb2_ingredient_phrase/_settings
+{
+  "index" : {
+    "max_result_window" : 2000000,
+    "max_inner_result_window": 2000000
+  }
+}

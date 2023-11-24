@@ -1,0 +1,15 @@
+Flask
+pandas
+requests
+beautifulsoup4
+numpy
+matplotlib
+flask-cors
+scikit-learn
+textblob 
+nltk 
+newspaper3k 
+transformers 
+sentencepiece 
+python-dateutil
+vaderSentiment

@@ -1,0 +1,46 @@
+.navigation {
+  background-color: #2697f8;
+  display: flex;
+  width: 100%;
+
+  .__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .__logo {
+      justify-content: left;
+      display: flex;
+      flex: 0 1;
+      min-width: 240px;
+      color: aliceblue;
+      align-items: center;
+
+      img {
+        padding: 0 10px 0 0;
+        width: 60px;
+        height: max-content;
+        align-items: center;
+        margin: 0;
+      }
+    }
+
+    .nav {
+      color: aliceblue;
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+
+      .__nav0 {
+        color: aliceblue;
+        display: flex;
+        align-items: center;
+
+        li {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
